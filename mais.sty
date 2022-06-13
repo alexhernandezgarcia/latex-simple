@@ -180,11 +180,11 @@
 
 % rules for title box
 \newcommand{\t@ptitlebar}{
-  \hrule height 3\p@
+  \hrule height 2\p@
   \vskip 0.15in
 }
 \newcommand{\middletitleb@r}{
-  \hrule height 3\p@
+  \hrule height 2\p@
   \vskip 0.1in
 }
 \newcommand{\b@ttomtitlebar}{
@@ -228,20 +228,13 @@
   \list{}{\leftmargin=1em\topsep=\z@}\item[]\raggedright\@author\endlist%
   \vskip 0.1in
   \nonfrenchspacing%
+  \b@ttomtitlebar
 }
 
 % ensure no floats on first page
 \AtBeginDocument{
   \suppressfloats%
 }
-
-% abstract
-\renewenvironment{abstract}{%
-  \middletitleb@r
-  \list{}{\leftmargin=5em\rightmargin=1em\labelwidth=4em}\item[\textbf{Abstract}]\small%
-}
-{\endlist
- \b@ttomtitlebar}
 
 % captions
 \usepackage[%
