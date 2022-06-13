@@ -2,11 +2,11 @@
 
 % This file will be kept up-to-date at the following GitHub repository:
 %
-% https://github.com/automl-conf/LatexTemplate
+% https://github.com/alexhernandezgarcia/mais-latex
 %
 % Please file any issues/bug reports, etc. you may have at:
 %
-% https://github.com/automl-conf/LatexTemplate/issues
+% https://github.com/alexhernandezgarcia/mais-latex/issues
 
 \usepackage{microtype} % microtypography
 \usepackage{booktabs}  % tables
@@ -22,20 +22,18 @@
 % To hide the supplementary material (e.g., for the first submission deadline),
 % use the [hidesupplement] option:
 %
-% \usepackage[hidesupplement]{automl}
+% \usepackage[hidesupplement]{mais}
 %
 % To compile a non-anonymized camera-ready version, add the [final] option (for
-% the main track), or the [finalworkshop] option (for the workshop track), e.g.,
+% the main track) e.g.,
 %
-% \usepackage[final]{automl}
-% \usepackage[finalworkshop]{automl}
+% \usepackage[final]{mais}
 %
 % or
 %
-% \usepackage[final, hidesupplement]{automl}
-% \usepackage[finalworkshop, hidesupplement]{automl}
+% \usepackage[final, hidesupplement]{mais}
 
-\usepackage[hidesupplement]{automl}
+\usepackage[final]{mais}
 
 % You may use any reference style as long as you are consistent throughout the
 % document. As a default we suggest author--year citations; for bibtex and
@@ -60,7 +58,7 @@
 % ]{biblatex}
 % \addbibresource{...}
 
-\title{Example Submission for AutoML 2022}
+\title{Example Submission for MAIS 2022}
 
 % The syntax for adding an author is
 %
@@ -105,231 +103,6 @@
 
 \maketitle
 
-\begin{abstract}
-\end{abstract}
-
-\section{Limitations and Broader Impact Statement}
-
-% The 9 pages allocated for the main paper must include a discussion of limitations
-% and a broader impact statement regarding the approach, datasets and applications
-% proposed/used in your paper. It should reflect on the environmental, ethical and
-% societal implications of your work. The statement should require at most one page.
-%
-% This section is included in the template as a default, but you can also place these
-% discussions anywhere else in the main paper, e.g., in the introduction/future work.
-
-% The Centre for the Governance of AI has written an excellent guide for writing
-% good broader impact statements (for the NeurIPS conference) that may be a
-% useful resource for AutoML-Conf authors:
-%
-% https://medium.com/@GovAI/a-guide-to-writing-the-neurips-impact-statement-4293b723f832
-
-\section{Reproducibility Checklist}
-
-% The reproducibility checklist is a combination of the NeurIPS '21 checklist:
-%
-%   https://neurips.cc/Conferences/2021/PaperInformation/PaperChecklist
-%
-% and the NAS checklist:
-%
-%   https://www.automl.org/wp-content/uploads/NAS/NAS_checklist.pdf
-%
-% For each question, change the default \answerTODO{} to either:
-%
-%     \answerYes{[justification]},
-%     \answerNo{[justification]}, or
-%     \answerNA{[justification]}.
-%
-% *You must include a brief justification to your answer,* either by
-% referencing the appropriate section of your paper or providing a brief inline
-% description.  For example:
-%
-% - Did you include the license of the code and datasets?
-%   \answerYes{See Section~\ref{sec:code}.}
-%
-% - Did you include all the code for running experiments?
-%   \answerNo{We include the code we wrote, but it depends on proprietary
-%   libraries for executing on a compute cluster and as such will not be
-%   runnable without modifications. We also include a runnable sequential
-%   version of the code that we also report experiments in the paper with.}
-%
-% - Did you include the license of the datasets?
-%   \answerNA{Our experiments were conducted on publicly available datasets and
-%   we did not introduce new datasets.}
-%
-% Please note that if you answer a question with \answerNo{}, we expect that you
-% compensate for it (e.g., if you cannot provide the full evaluation code, you
-% should at least provide code for a minimal reproduction of the main insights
-% of your paper).
-%
-% Please do not modify the questions and only use the provided macros for your
-% answers. Note that this section does not count towards the page limit.
-
-\begin{enumerate}
-\item For all authors\dots
-  %
-  \begin{enumerate}
-  \item Do the main claims made in the abstract and introduction accurately
-    reflect the paper's contributions and scope?
-    %
-    \answerTODO{}
-    %
-  \item Did you describe the limitations of your work?
-    %
-    \answerTODO{}
-    %
-  \item Did you discuss any potential negative societal impacts of your work?
-    %
-    \answerTODO{}
-    %
-  \item Have you read the ethics author's and review guidelines and ensured that your paper
-    conforms to them? \url{https://automl.cc/ethics-accessibility/}
-    %
-    \answerTODO{}
-    %
-  \end{enumerate}
-  %
-\item If you are including theoretical results\dots
-  %
-  \begin{enumerate}
-  \item Did you state the full set of assumptions of all theoretical results?
-    %
-    \answerTODO{}
-    %
-  \item Did you include complete proofs of all theoretical results?
-    %
-    \answerTODO{}
-    %
-  \end{enumerate}
-  %
-\item If you ran experiments\dots
-  %
-  \begin{enumerate}
-  \item Did you include the code, data, and instructions needed to reproduce the
-    main experimental results, including all requirements (e.g.,
-    \texttt{requirements.txt} with explicit version), an instructive
-    \texttt{README} with installation, and execution commands (either in the
-    supplemental material or as a \textsc{url})?
-    %
-    \answerTODO{}
-    %
-  \item Did you include the raw results of running the given instructions on the
-    given code and data?
-    %
-    \answerTODO{}
-    %
-  \item Did you include scripts and commands that can be used to generate the
-    figures and tables in your paper based on the raw results of the code, data,
-    and instructions given?
-    %
-    \answerTODO{}
-    %
-  \item Did you ensure sufficient code quality such that your code can be safely
-    executed and the code is properly documented?
-    %
-    \answerTODO{}
-    %
-  \item Did you specify all the training details (e.g., data splits,
-    pre-processing, search spaces, fixed hyperparameter settings, and how they
-    were chosen)?
-    %
-    \answerTODO{}
-    %
-  \item Did you ensure that you compared different methods (including your own)
-    exactly on the same benchmarks, including the same datasets, search space,
-    code for training and hyperparameters for that code?
-    %
-    \answerTODO{}
-    %
-  \item Did you run ablation studies to assess the impact of different
-    components of your approach?
-    %
-    \answerTODO{}
-    %
-  \item Did you use the same evaluation protocol for the methods being compared?
-    %
-    \answerTODO{}
-    %
-  \item Did you compare performance over time?
-    %
-    \answerTODO{}
-    %
-  \item Did you perform multiple runs of your experiments and report random seeds?
-    %
-    \answerTODO{}
-    %
-  \item Did you report error bars (e.g., with respect to the random seed after
-    running experiments multiple times)?
-    %
-    \answerTODO{}
-    %
-  \item Did you use tabular or surrogate benchmarks for in-depth evaluations?
-    %
-    \answerTODO{}
-    %
-  \item Did you include the total amount of compute and the type of resources
-    used (e.g., type of \textsc{gpu}s, internal cluster, or cloud provider)?
-    %
-    \answerTODO{}
-    %
-  \item Did you report how you tuned hyperparameters, and what time and
-    resources this required (if they were not automatically tuned by your AutoML
-    method, e.g. in a \textsc{nas} approach; and also hyperparameters of your
-    own method)?
-    %
-    \answerTODO{}
-    %
-  \end{enumerate}
-  %
-\item If you are using existing assets (e.g., code, data, models) or
-  curating/releasing new assets\dots
-  %
-  \begin{enumerate}
-  \item If your work uses existing assets, did you cite the creators?
-    %
-    \answerTODO{}
-    %
-  \item Did you mention the license of the assets?
-    %
-    \answerTODO{}
-    %
-  \item Did you include any new assets either in the supplemental material or as
-    a \textsc{url}?
-    %
-    \answerTODO{}
-    %
-  \item Did you discuss whether and how consent was obtained from people whose
-    data you're using/curating?
-    %
-    \answerTODO{}
-    %
-  \item Did you discuss whether the data you are using/curating contains
-    personally identifiable information or offensive content?
-    %
-    \answerTODO{}
-    %
-  \end{enumerate}
-  %
-\item If you used crowdsourcing or conducted research with human subjects\dots
-  %
-  \begin{enumerate}
-  \item Did you include the full text of instructions given to participants and
-    screenshots, if applicable?
-    %
-    \answerTODO{}
-    %
-  \item Did you describe any potential participant risks, with links to
-    Institutional Review Board (\textsc{irb}) approvals, if applicable?
-    %
-    \answerTODO{}
-    %
-  \item Did you include the estimated hourly wage paid to participants and the
-    total amount spent on participant compensation?
-    %
-    \answerTODO{}
-    %
-  \end{enumerate}
-\end{enumerate}
 
 % content will be automatically hidden during submission
 \begin{acknowledgements}
@@ -338,7 +111,8 @@
 
 % print bibliography -- for bibtex / natbib, use:
 
-% \bibliography{...}
+\bibliography{references}
+\bibliographystyle{mais}
 
 % and for biber / biblatex, use:
 
