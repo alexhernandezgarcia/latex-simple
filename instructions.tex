@@ -58,7 +58,7 @@
 % ]{biblatex}
 % \addbibresource{example.bib}
 
-\title{Documentation for the \texttt{mais} Package}
+\title{Documentation for the \texttt{mais} package}
 
 % The syntax for adding an author is
 %
@@ -89,85 +89,76 @@
 
 % define PDF metadata, aids in accessibility of the resulting PDF
 \hypersetup{%
-  pdfauthor={AutoML-Conf}, % will be reset to "Anonymous" unless the "final" package option is given
+  pdfauthor={MAIS-Conf}, % will be reset to "Anonymous" unless the "final" package option is given
   pdftitle={Documentation for the mais Package},
   pdfsubject={Documentation for mais Package},
-  pdfkeywords={AutoML-Conf, LaTeX, style}
+  pdfkeywords={MAIS-Conf, LaTeX, style}
 }
 
 \begin{document}
 
 \maketitle
 
-The \texttt{mais} package provides a \LaTeX{} style for the AutoML Conference.
-This document provides some notes regarding the package and tips for typesetting
-manuscripts. The package and this document is maintained at the following GitHub
+The \texttt{mais} package provides a \LaTeX{} style for the extended abstract submissions to the Montreal AI Symposium (MAIS). This document provides some notes regarding the package and tips for typesetting manuscripts. The package and this document is maintained at the following GitHub
 repository:
+
 \begin{center}
-  \url{https://github.com/automl-conf/LatexTemplate}
+  \url{https://github.com/alexhernandezgarcia/mais-latex}
 \end{center}
+
 Users are encouraged to submit issues, bug reports, etc.\ to:
+
 \begin{center}
-  \url{https://github.com/automl-conf/LatexTemplate/issues}
+  \url{https://github.com/alexhernandezgarcia/mais-latex/issues}
 \end{center}
-A barebones submission is also available as \texttt{barebones\_submission\_template.tex} in the same
-repository.
+
+A barebones submission is also available as \texttt{barebones\_submission\_template.tex} in the same repository.
+
+This package has been built upon the \texttt{automl} package, developed and generously open-sourced by Roman Garnett in \url{https://github.com/automl-conf/LatexTemplate}.
 
 \section{Package options}
 
-With no options, the \texttt{mais} package prepares an anonymized manuscript
-with hidden supplemental material. Two options are supported changing this
-behavior:
+With no options, the \texttt{mais} package prepares an anonymized manuscript with hidden supplemental material. Two options are supported changing this behavior:
+
 \begin{itemize}
-\item \texttt{final} -- produces non-anonymized camera-ready version for
-  distribution and/or publication in the main conference track
-\item \texttt{finalworkshop} -- produces non-anonymized camera-ready version for
-  distribution and/or publication in the workshop track
-\item \texttt{hidesupplement} -- hides supplementary material (following
-  \verb|\appendix|); for example, for submitting or distributing the main paper
-  without supplement
+\item \texttt{final} -- produces non-anonymized camera-ready version for distribution and/or publication in the main conference track.
+\item \texttt{hidesupplement} -- hides supplementary material (following \verb|\appendix|); for example, for submitting or distributing the main paper without supplement.
 \end{itemize}
-Note that \texttt{final} or \texttt{finalworkshop} may be used in combination
-with \texttt{hidesupplement} to prepare a non-anonymized version of the main
-paper with hidden supplement.
+
+Note that \texttt{final} may be used in combination with \texttt{hidesupplement} to prepare a non-anonymized version of the main paper with hidden supplement.
 
 \section{Supplemental material}
 
-Please provide supplemental material in the main document. You may begin the
-supplemental material using \verb|\appendix|. Any content following this command
-will be suppressed in the final output if the \texttt{hidesupplement} option is
-given.
+Please provide supplemental material in the main document. You may begin the supplemental material using \verb|\appendix|. Any content following this command will be suppressed in the final output if the \texttt{hidesupplement} option is given.
 
 \section{Note regarding line numbering at submission time}
 
-To ensure that line numbering works correctly with display math mode, please do
-\emph{not} use \TeX{} primitives such as \verb|$$| and \texttt{eqnarray}.  (Using
-these is not good practice anyway.)%
+To ensure that line numbering works correctly with display math mode, please do \emph{not} use \TeX{} primitives such as \verb|$$| and \texttt{eqnarray}.  (Using these is not good practice anyway.)%
 %
 \footnote{\url{https://tex.stackexchange.com/questions/196/eqnarray-vs-align}}%
 \footnote{\url{https://tex.stackexchange.com/questions/503/why-is-preferable-to}}
 %
-Please use \LaTeX{} equivalents such as \verb|\[ ... \]| (or
-\verb|\begin{equation} ... \end{equation}|) and the \texttt{align} environment
-from the \texttt{amsmath} package.%
+Please use \LaTeX{} equivalents such as \verb|\[ ... \]| (or \verb|\begin{equation} ... \end{equation}|) and the \texttt{align} environment from the \texttt{amsmath} package.%
 %
 \footnote{\url{http://tug.ctan.org/info/short-math-guide/short-math-guide.pdf}}
 
 \section{References}
 
 Authors may use any citation style as long as it is consistent throughout the
-document. By default we propose author--year citations. Code is provided in the
-preamble to achieve such citations using either \texttt{natbib/bibtex} or the
-more modern \texttt{biblatex/biber}.
+document. By default, we propose the style defined in `mais.bst` which uses \texttt{natbib/bibtex}, which can be used by including the following at the end of the document:
 
-You may create a parenthetical reference with \verb|\citep|, such as appears at
-the end of this sentence \citep{example_book}.  You may create a textual
-reference using \verb|\citet|, as \citet{example_book} also demonstrated.
+\begin{verbatim}
+\bibliography{references}
+\bibliographystyle{mais}
+\end{verbatim}
+
+where `mais` refers to the file `mais.bst` and references to `references.bib`, a BibTeX file containing bibliographical entries.
+
+You may create a parenthetical reference with \verb|\citep|, such as appears at the end of this sentence \citep{mitchell2003venus}. You may create a textual reference using \verb|\citet|, as \citet{mitchell2003venus} also demonstrated.
 
 \section{Tables}
 
-We recommend the \texttt{booktabs} package for creating tables, as demonstrated
-in Table \ref{example_table}. Note that table captions appear \emph{above} tables.
+We recommend the \texttt{booktabs} package for creating tables, as demonstrated in Table \ref{example_table}. Note that table captions appear \emph{above} tables.
 
 \begin{table}
   \caption{An example table using the \texttt{booktabs} package.}
@@ -175,51 +166,43 @@ in Table \ref{example_table}. Note that table captions appear \emph{above} table
   \centering
   \begin{tabular}{lrr}
     \toprule
-    & \multicolumn{2}{c}{metric} \\
+    & \multicolumn{2}{c}{Metric} \\
     \cmidrule{2-3}
-    method & accuracy & time \\
+    Method & Accuracy & Time \\
     \midrule
-    baseline & 10 & 100 \\
-    our method & \textbf{100} & \textbf{10} \\
+    Baseline & 10 & 100 \\
+    Our method & 100 & 10 \\
     \bottomrule
   \end{tabular}
 \end{table}
 
 \section{Figures and subfigures}
 
-The \texttt{mais} style loads the \texttt{subcaption} package, which may be
-used to create and caption subfigures. Please note that this is
-\emph{incompatible} with the (obsolete and deprecated) \texttt{subfigure}
-package. A figure with subfigures is demonstrated in Figure
-\ref{example_figure}. Note that figure captions appear \emph{below} figures.
+The \texttt{mais} style loads the \texttt{subcaption} package, which may be used to create and caption subfigures. Please note that this is \emph{incompatible} with the (obsolete and deprecated) \texttt{subfigure} package. A figure with subfigures is demonstrated in Figure \ref{example_figure}. Note that figure captions appear \emph{below} figures.
 
-Please ensure that all text appearing in figures (axis labels, legends, etc.)
-is legible.
+Please ensure that all text appearing in figures (axis labels, legends, etc.) is legible.
 
 \begin{figure}
   \begin{subfigure}[t]{0.5\linewidth}
     \centering
-    \framebox{Amazing figure!}
+    \framebox{Imagine this is a nice figure}
     \caption{Subfigure caption.}
     \label{example_figure_left}
   \end{subfigure}
   \begin{subfigure}[t]{0.5\linewidth}
     \centering
-    \framebox{Another amazing figure!}
+    \framebox{Imagine this is another nice figure}
     \caption{Another subfigure caption.}
     \label{example_figure_right}
   \end{subfigure}
-  \caption{An example figure with subfigures. \subref{example_figure_left}: an
-    amazing figure. \subref{example_figure_right}: another amazing figure.}
+  \caption{An example figure with subfigures. \subref{example_figure_left}: left figure. \subref{example_figure_right}: right figure.}
   \label{example_figure}
 \end{figure}
 
 \section{Pseudocode}
 \label{sec:code}
 
-To add pseudocode, you may make use of any package you see fit -- the
-\texttt{mais} package should be compatible with any of them. In particular,
-you may want to check out the \texttt{algorithm2e}%
+To add pseudocode, you may make use of any package you see fit---the \texttt{mais} package should be compatible with any of them. In particular, you may want to check out the \texttt{algorithm2e}%
 %
 \footnote{\url{https://ctan.org/pkg/algorithm2e}}
 %
@@ -238,253 +221,16 @@ with \verb|\begin{algorithm} ... \end{algorithm}|. This environment supports
 
 \section{Adding acknowledgments}
 
-You may add acknowledgments of funding, etc.\ using the \texttt{acknowledgments}
-environment. Acknowledgments will be automatically commented out at submission
-time. An example is given below in the source code for this document; it will be
-hidden in the \textsc{pdf} unless the \texttt{final} or \texttt{finalworkshop}
-option is given.
-
-\section{Required Material}
-
-All submissions must include a discussion on limitations and a broader impact
-statement; and a \textbf{Reproducibility Checklist} in their manuscripts, both
-at submission and camera-ready time.
-The discussion of limitations and broader impact is part of the 9 pages allocated
-to the main paper (there is no page limitation for references and appendices), while
-the reproducibility checklist is not.
-
-\section{Limitations and Broader Impact Statement}
-
-The 9 pages allocated for the main paper must include a discussion of limitations
-and a broader impact statement regarding the approach, datasets and applications
-proposed/used in your paper. It should reflect on the environmental, ethical and
-societal implications of your work. The statement should require at most one page
-and must be included both at submission and camera-ready time.
-
-This section is included in the template as a default, but you can also place these
-discussions anywhere else in the main paper, e.g., in the introduction/future work.
-
-The Centre for the Governance of AI has written an excellent guide for writing
-good broader impact statements (for the NeurIPS conference) that may be a useful
-resource for AutoML-Conf authors.%
-%
-\footnote{\url{https://medium.com/@GovAI/a-guide-to-writing-the-neurips-impact-statement-4293b723f832}}
-
-\section{Reproducibility Checklist}
-
-All authors must include a section with the AutoML-Conf \textbf{Reproducibility
-Checklist} in their manuscripts, both at submission and camera-ready time.
-The reproducibility checklist is a combination of the
-%
-\href{https://neurips.cc/Conferences/2021/PaperInformation/PaperChecklist}
-     {NeurIPS '21 checklist}
-%
-and the
-\href{https://www.automl.org/wp-content/uploads/NAS/NAS_checklist.pdf}
-     {\textsc{nas} checklist}.
-%
-For each question, change the default \verb|\answerTODO{}| (typeset \answerTODO)
-to
-\verb|\answerYes{[justification]}| (typeset \answerYes),
-\verb|\answerNo{[justification]}| (typeset \answerNo), or
-\verb|\answerNA{[justification]}| (typeset \answerNA).
-\textbf{You must include a brief justification to your answer,} either by
-referencing the appropriate section of your paper or providing a brief inline
-description.  For example:
-\begin{itemize}
-\item Did you include the license of the code and datasets? \answerYes{See
-  Section~\ref{sec:code}.}
-\item Did you include all the code for running experiments? \answerNo{We include
-  the code we wrote, but it depends on proprietary libraries for executing on a
-  compute cluster and as such will not be runnable without modifications. We
-  also include a runnable sequential version of the code that we also report
-  experiments in the paper with.}
-\item Did you include the license of the datasets? \answerNA{Our experiments
-  were conducted on publicly available datasets and we have not introduced new
-  datasets.}
-\end{itemize}
-Please note that if you answer a question with \verb|\answerNo{}|, we expect
-that you compensate for it (e.g., if you cannot provide the full evaluation
-code, you should at least provide code for a minimal reproduction of the main
-insights of your paper).
-
-Please do not modify the questions and only use the provided macros for your
-answers. Note that this section does not count towards the page limit. In your
-paper, please delete this instructions block and only keep the Checklist section
-heading above along with the questions/answers below.
-\begin{enumerate}
-\item For all authors\dots
-  %
-  \begin{enumerate}
-  \item Do the main claims made in the abstract and introduction accurately
-    reflect the paper's contributions and scope?
-    %
-    \answerTODO{}
-    %
-  \item Did you describe the limitations of your work?
-    %
-    \answerTODO{}
-    %
-  \item Did you discuss any potential negative societal impacts of your work?
-    %
-    \answerTODO{}
-    %
-  \item Have you read the ethics review guidelines and ensured that your paper
-    conforms to them? \url{https://automl.cc/ethics-accessibility/}
-    %
-    \answerTODO{}
-    %
-  \end{enumerate}
-  %
-\item If you are including theoretical results\dots
-  %
-  \begin{enumerate}
-  \item Did you state the full set of assumptions of all theoretical results?
-    %
-    \answerTODO{}
-    %
-  \item Did you include complete proofs of all theoretical results?
-    %
-    \answerTODO{}
-    %
-  \end{enumerate}
-  %
-\item If you ran experiments\dots
-  %
-  \begin{enumerate}
-  \item Did you include the code, data, and instructions needed to reproduce the
-    main experimental results, including all requirements (e.g.,
-    \texttt{requirements.txt} with explicit version), an instructive
-    \texttt{README} with installation, and execution commands (either in the
-    supplemental material or as a \textsc{url})?
-    %
-    \answerTODO{}
-    %
-  \item Did you include the raw results of running the given instructions on the
-    given code and data?
-    %
-    \answerTODO{}
-    %
-  \item Did you include scripts and commands that can be used to generate the
-    figures and tables in your paper based on the raw results of the code, data,
-    and instructions given?
-    %
-    \answerTODO{}
-    %
-  \item Did you ensure sufficient code quality such that your code can be safely
-    executed and the code is properly documented?
-    %
-    \answerTODO{}
-    %
-  \item Did you specify all the training details (e.g., data splits,
-    pre-processing, search spaces, fixed hyperparameter settings, and how they
-    were chosen)?
-    %
-    \answerTODO{}
-    %
-  \item Did you ensure that you compared different methods (including your own)
-    exactly on the same benchmarks, including the same datasets, search space,
-    code for training and hyperparameters for that code?
-    %
-    \answerTODO{}
-    %
-  \item Did you run ablation studies to assess the impact of different
-    components of your approach?
-    %
-    \answerTODO{}
-    %
-  \item Did you use the same evaluation protocol for the methods being compared?
-    %
-    \answerTODO{}
-    %
-  \item Did you compare performance over time?
-    %
-    \answerTODO{}
-    %
-  \item Did you perform multiple runs of your experiments and report random seeds?
-    %
-    \answerTODO{}
-    %
-  \item Did you report error bars (e.g., with respect to the random seed after
-    running experiments multiple times)?
-    %
-    \answerTODO{}
-    %
-  \item Did you use tabular or surrogate benchmarks for in-depth evaluations?
-    %
-    \answerTODO{}
-    %
-  \item Did you include the total amount of compute and the type of resources
-    used (e.g., type of \textsc{gpu}s, internal cluster, or cloud provider)?
-    %
-    \answerTODO{}
-    %
-  \item Did you report how you tuned hyperparameters, and what time and
-    resources this required (if they were not automatically tuned by your AutoML
-    method, e.g. in a \textsc{nas} approach; and also hyperparameters of your
-    own method)?
-    %
-    \answerTODO{}
-    %
-  \end{enumerate}
-  %
-\item If you are using existing assets (e.g., code, data, models) or
-  curating/releasing new assets\dots
-  %
-  \begin{enumerate}
-  \item If your work uses existing assets, did you cite the creators?
-    %
-    \answerTODO{}
-    %
-  \item Did you mention the license of the assets?
-    %
-    \answerTODO{}
-    %
-  \item Did you include any new assets either in the supplemental material or as
-    a \textsc{url}?
-    %
-    \answerTODO{}
-    %
-  \item Did you discuss whether and how consent was obtained from people whose
-    data you're using/curating?
-    %
-    \answerTODO{}
-    %
-  \item Did you discuss whether the data you are using/curating contains
-    personally identifiable information or offensive content?
-    %
-    \answerTODO{}
-    %
-  \end{enumerate}
-  %
-\item If you used crowdsourcing or conducted research with human subjects\dots
-  %
-  \begin{enumerate}
-  \item Did you include the full text of instructions given to participants and
-    screenshots, if applicable?
-    %
-    \answerTODO{}
-    %
-  \item Did you describe any potential participant risks, with links to
-    Institutional Review Board (\textsc{irb}) approvals, if applicable?
-    %
-    \answerTODO{}
-    %
-  \item Did you include the estimated hourly wage paid to participants and the
-    total amount spent on participant compensation?
-    %
-    \answerTODO{}
-    %
-  \end{enumerate}
-\end{enumerate}
+You may add acknowledgments of funding, etc.\ using the \texttt{acknowledgments} environment. Acknowledgments will be automatically commented out at submission time. An example is given below in the source code for this document; it will be hidden in the \textsc{pdf} unless the \texttt{final} or \texttt{finalworkshop} option is given.
 
 \begin{acknowledgements}
-  The authors have many people to thank!
+  Thank y'all!
 \end{acknowledgements}
 
 % print bibliography -- for bibtex / natbib, use:
 
-\bibliography{example}
+\bibliography{references}
+\bibliographystyle{mais}
 
 % and for biber / biblatex, use:
 
