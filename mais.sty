@@ -1,16 +1,19 @@
-% Author: Roman Garnett, romangarnett@gmail.com
+% Author: Alex Hernandez-Garcia, alex.hernandez-garcia@mila.quebec
+% 
+% Forked from: https://github.com/automl-conf/LatexTemplate
+% By: Roman Garnett, romangarnett@gmail.com
 %
 % The style file will be kept up-to-date at the following GitHub repository:
 %
-% https://github.com/automl-conf/LatexTemplate
+% https://github.com/alexhernandezgarcia/mais-latex
 %
 % Please file any issues you may have there.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{automl}[2022/05/16 AutoML submission/camera-ready style file]
+\ProvidesPackage{mais}[2022/05/16 MAIS submission/camera-ready style file]
 
 % change this every year for notice string
-\newcommand{\@utomlyear}{2022}
+\newcommand{\m@aisyear}{2022}
 
 % declare final option, which creates camera-ready copy for the main track
 \newif\if@submission\@submissiontrue
@@ -32,7 +35,7 @@
 
 % handle tweaks for camera-ready copy vs. submission copy
 \if@submission
-  \newcommand{\c@nferencestring}{Submitted to AutoML Conference \@utomlyear}
+  \newcommand{\c@nferencestring}{Submitted to MAIS \m@aisyear}
 
   % line numbers for submission
   \usepackage[right]{lineno}
@@ -64,9 +67,9 @@
   }
 \else
   \if@workshop
-    \newcommand{\c@nferencestring}{AutoML Conference \@utomlyear{} Workshop Track}
+    \newcommand{\c@nferencestring}{MAIS \m@aisyear{} Workshop Track}
   \else
-    \newcommand{\c@nferencestring}{AutoML Conference \@utomlyear}
+    \newcommand{\c@nferencestring}{MAIS \m@aisyear}
   \fi
 \fi
 
@@ -97,11 +100,11 @@
   \renewcommand{\footrulewidth}{0pt}%
   \fancypagestyle{plain}{%
     \fancyfoot[L]{\small\c@nferencestring}
-    \fancyfoot[R]{\small\textcopyright\,\@utomlyear\ the authors, released under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}}
+    \fancyfoot[R]{\small\textcopyright\,\m@aisyear\ the authors, released under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}}
   }
   \pagestyle{fancy}
   \@ifpackageloaded{fullpage}
-    {\PackageWarning{automl}{fullpage package not allowed! Overwriting formatting.}}
+    {\PackageWarning{mais}{fullpage package not allowed! Overwriting formatting.}}
     {}
 }
 
