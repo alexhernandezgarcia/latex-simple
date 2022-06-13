@@ -4,8 +4,10 @@ LaTeX template for the abstract submissions to the Montreal AI Symposium [(MAIS)
 
 ## Provided files
 
-* `mais.sty`: LaTeX style file
+* `mais.sty`: Style file
+* `mais.bst`: Bibliography style file
 * `instructions.tex` and `instructions.pdf`: documentation for the `mais` LaTeX package and tips for authors.
+* `references.bib`: an example BibTeX file 
 * `barebones_submission_template.tex`: a barebones submission template.
 * `dummy_submission.tex` and `dummy_submission.pdf`: a dummy submission to easily see the approximate final appearance.
 
