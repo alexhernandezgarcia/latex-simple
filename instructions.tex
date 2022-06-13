@@ -22,16 +22,16 @@
 % To hide the supplementary material (e.g., for the first submission deadline),
 % use the [hidesupplement] option:
 %
-% \usepackage[hidesupplement]{automl}
+% \usepackage[hidesupplement]{mais}
 %
 % To compile a non-anonymized camera-ready version, add the [final] option (for
 % the main track) e.g.,
 %
-% \usepackage[final]{automl}
+% \usepackage[final]{mais}
 %
 % or
 %
-% \usepackage[final, hidesupplement]{automl}
+% \usepackage[final, hidesupplement]{mais}
 
 \usepackage[final]{mais}
 
@@ -58,7 +58,7 @@
 % ]{biblatex}
 % \addbibresource{example.bib}
 
-\title{Documentation for the \texttt{automl} Package}
+\title{Documentation for the \texttt{mais} Package}
 
 % The syntax for adding an author is
 %
@@ -90,8 +90,8 @@
 % define PDF metadata, aids in accessibility of the resulting PDF
 \hypersetup{%
   pdfauthor={AutoML-Conf}, % will be reset to "Anonymous" unless the "final" package option is given
-  pdftitle={Documentation for the automl Package},
-  pdfsubject={Documentation for automl Package},
+  pdftitle={Documentation for the mais Package},
+  pdfsubject={Documentation for mais Package},
   pdfkeywords={AutoML-Conf, LaTeX, style}
 }
 
@@ -103,7 +103,7 @@
   Create with \verb|\begin{abstract} ... \end{abstract}|.
 \end{abstract}
 
-The \texttt{automl} package provides a \LaTeX{} style for the AutoML Conference.
+The \texttt{mais} package provides a \LaTeX{} style for the AutoML Conference.
 This document provides some notes regarding the package and tips for typesetting
 manuscripts. The package and this document is maintained at the following GitHub
 repository:
@@ -119,7 +119,7 @@ repository.
 
 \section{Package options}
 
-With no options, the \texttt{automl} package prepares an anonymized manuscript
+With no options, the \texttt{mais} package prepares an anonymized manuscript
 with hidden supplemental material. Two options are supported changing this
 behavior:
 \begin{itemize}
@@ -191,7 +191,7 @@ in Table \ref{example_table}. Note that table captions appear \emph{above} table
 
 \section{Figures and subfigures}
 
-The \texttt{automl} style loads the \texttt{subcaption} package, which may be
+The \texttt{mais} style loads the \texttt{subcaption} package, which may be
 used to create and caption subfigures. Please note that this is
 \emph{incompatible} with the (obsolete and deprecated) \texttt{subfigure}
 package. A figure with subfigures is demonstrated in Figure
@@ -222,7 +222,7 @@ is legible.
 \label{sec:code}
 
 To add pseudocode, you may make use of any package you see fit -- the
-\texttt{automl} package should be compatible with any of them. In particular,
+\texttt{mais} package should be compatible with any of them. In particular,
 you may want to check out the \texttt{algorithm2e}%
 %
 \footnote{\url{https://ctan.org/pkg/algorithm2e}}
