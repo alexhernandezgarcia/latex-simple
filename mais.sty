@@ -20,12 +20,6 @@
 \DeclareOption{final}{%
   \@submissionfalse
 }
-% declare finalworkshop option, which creates camera-ready copy for the workshop track
-\newif\if@workshop\@workshopfalse
-\DeclareOption{finalworkshop}{%
-  \@workshoptrue
-  \@submissionfalse
-}
 % declare hidesupplement option, which hides supplemental material
 \newif\if@hidesupplement\@hidesupplementfalse
 \DeclareOption{hidesupplement}{%
@@ -66,11 +60,7 @@
       }{}
   }
 \else
-  \if@workshop
-    \newcommand{\c@nferencestring}{MAIS \m@aisyear{} Workshop Track}
-  \else
-    \newcommand{\c@nferencestring}{MAIS \m@aisyear}
-  \fi
+  \newcommand{\c@nferencestring}{MAIS \m@aisyear}
 \fi
 
 % hide the supplement by redefining \appendix
