@@ -19,7 +19,7 @@ The easiest way to start using this template is probably by cloning the reposito
 git clone git@github.com:alexhernandezgarcia/mais-latex.git
 ```
 
-Alternatively, you may simply download the files you will use. You may rename `barebones_submission_template.tex` and started writing your abstract there. If choose to use the default bibliography style and format, you can simply add the BibTex entries of your citations to `references.bib`.
+Alternatively, you may simply download the files you will use. You may rename `barebones_submission_template.tex` and start writing your abstract there. If choose to use the default bibliography style and format, you can simply add the BibTex entries of your citations to `references.bib`.
 
 Please read [`instructions.pdf`](./instructions.pdf) for a short introduction of the package and the main functionality.
 
