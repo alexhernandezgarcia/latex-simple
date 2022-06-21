@@ -11,6 +11,18 @@ LaTeX template for the abstract submissions to the Montreal AI Symposium [(MAIS)
 * `barebones_submission_template.tex`: a barebones submission template.
 * `dummy_submission.tex` and `dummy_submission.pdf`: a dummy submission to easily see the approximate final appearance.
 
+## Basic usage
+
+The easiest way to start using this template is probably by cloning the repository:
+
+```
+git clone git@github.com:alexhernandezgarcia/mais-latex.git
+```
+
+Alternatively, you may simply download the files you will use. You may rename `barebones_submission_template.tex` and started writing your abstract there. If choose to use the default bibliography style and format, you can simply add the BibTex entries of your citations to `references.bib`.
+
+Please read [`instructions.pdf`](./instructions.pdf) for a short introduction of the package and the main functionality.
+
 ## Questions
 
 For questions and bug reports, please file issues at https://github.com/alexhernandezgarcia/mais-latex/issues
