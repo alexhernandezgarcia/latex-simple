@@ -2,11 +2,11 @@
 
 % This file will be kept up-to-date at the following GitHub repository:
 %
-% https://github.com/alexhernandezgarcia/mais-latex
+% https://github.com/alexhernandezgarcia/latex-simple
 %
 % Please file any issues/bug reports, etc. you may have at:
 %
-% https://github.com/alexhernandezgarcia/mais-latex/issues
+% https://github.com/alexhernandezgarcia/latex-simple/issues
 
 \usepackage{microtype} % microtypography
 \usepackage{booktabs}  % tables
@@ -22,25 +22,24 @@
 % To hide the supplementary material (e.g., for the first submission deadline),
 % use the [hidesupplement] option:
 %
-% \usepackage[hidesupplement]{mais}
+% \usepackage[hidesupplement]{latex-simple}
 %
 % To compile a non-anonymized camera-ready version, add the [final] option (for
 % the main track) e.g.,
 %
-% \usepackage[final]{mais}
+% \usepackage[final]{latex-simple}
 %
 % or
 %
-% \usepackage[final, hidesupplement]{mais}
+% \usepackage[final, hidesupplement]{latex-simple}
 
-\usepackage[final]{mais}
+\usepackage[final]{latex-simple}
 
 % You may use any reference style as long as you are consistent throughout the
 % document. As a default we suggest author--year citations; for bibtex and
 % natbib you may use:
 
 \usepackage{natbib}
-\bibliographystyle{apalike}
 
 % and for biber and biblatex you may use:
 
@@ -58,7 +57,7 @@
 % ]{biblatex}
 % \addbibresource{...}
 
-\title{Example Submission for MAIS 2022}
+\title{Barebones template with latex-simple}
 
 % The syntax for adding an author is
 %
@@ -103,6 +102,9 @@
 
 \maketitle
 
+\begin{abstract}
+  
+\end{abstract}
 
 % content will be automatically hidden during submission
 \begin{acknowledgements}
@@ -112,7 +114,7 @@
 % print bibliography -- for bibtex / natbib, use:
 
 \bibliography{references}
-\bibliographystyle{mais}
+\bibliographystyle{latex-simple}
 
 % and for biber / biblatex, use:
 

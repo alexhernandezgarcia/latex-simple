@@ -5,15 +5,12 @@
 %
 % The style file will be kept up-to-date at the following GitHub repository:
 %
-% https://github.com/alexhernandezgarcia/mais-latex
+% https://github.com/alexhernandezgarcia/latex-simple
 %
 % Please file any issues you may have there.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{mais}[2022/05/16 MAIS submission/camera-ready style file]
-
-% change this every year for notice string
-\newcommand{\m@aisyear}{2022}
+\ProvidesPackage{latex-simple}[2023/06/14 LaTeX-simple style file]
 
 % declare final option, which creates camera-ready copy for the main track
 \newif\if@submission\@submissiontrue
@@ -29,7 +26,7 @@
 
 % handle tweaks for camera-ready copy vs. submission copy
 \if@submission
-  \newcommand{\c@nferencestring}{Submitted to MAIS \m@aisyear}
+  \newcommand{\c@nferencestring}{Submitted}
 
   % line numbers for submission
   \usepackage[right]{lineno}
@@ -60,7 +57,7 @@
       }{}
   }
 \else
-  \newcommand{\c@nferencestring}{MAIS \m@aisyear, September 17th 2022, Montréal}
+  \newcommand{\c@nferencestring}{\today}
 \fi
 
 % hide the supplement by redefining \appendix
@@ -90,11 +87,11 @@
   \renewcommand{\footrulewidth}{0pt}%
   \fancypagestyle{plain}{%
     \fancyfoot[L]{\small\c@nferencestring}
-    \fancyfoot[R]{\small\textcopyright\,\m@aisyear\ the authors, released under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}}
+    \fancyfoot[R]{\small\textcopyright\,Released under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}}
   }
   \pagestyle{fancy}
   \@ifpackageloaded{fullpage}
-    {\PackageWarning{mais}{fullpage package not allowed! Overwriting formatting.}}
+    {\PackageWarning{latex-simple}{fullpage package not allowed! Overwriting formatting.}}
     {}
 }
 
@@ -191,6 +188,10 @@
   \hrule height 1.5\p@
   \vskip 4ex \@minus 0.5ex
 }
+\newcommand{\thintitleb@r}{
+  \hrule height 0.5\p@
+  \vskip 4ex \@minus 0.5ex
+}
 
 \usepackage[noblocks]{authblk}
 \renewcommand{\Authfont}{\normalfont\bfseries}
@@ -235,6 +236,13 @@
 \AtBeginDocument{
   \suppressfloats%
 }
+
+% abstract
+\renewenvironment{abstract}{%
+  \list{}{\leftmargin=5em\rightmargin=1em\labelwidth=4em}\item[\textbf{Abstract}]\small%
+}
+{\endlist
+ \b@ttomtitlebar}
 
 % captions
 \usepackage[%
