@@ -8,18 +8,6 @@
 %
 % https://github.com/alexhernandezgarcia/latex-simple/issues
 
-\usepackage{microtype} % microtypography
-\usepackage{booktabs}  % tables
-\usepackage{url}  % urls
-
-% AMS math
-\usepackage{amsmath}
-\usepackage{amsthm}
-
-% Dummy text
-\usepackage[english]{babel}
-\usepackage{blindtext}
-
 % With no package options, the submission will be anonymized, the supplemental
 % material will be suppressed, and line numbers will be added to the manuscript.
 %
@@ -61,7 +49,28 @@
 % ]{biblatex}
 % \addbibresource{...}
 
+% AMS math
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+% Dummy text
+\usepackage[english]{babel}
+\usepackage{blindtext}
+
+% Other packages
+\usepackage{microtype} % microtypography
+\usepackage{booktabs}  % tables
+\usepackage{url}  % urls
+
+%%%%%%%%%
+% TITLE %
+%%%%%%%%%
+
 \title{A dummy paper with the LaTeX-simple template}
+
+%%%%%%%%%%%
+% AUTHORS %
+%%%%%%%%%%%
 
 % The syntax for adding an author is
 %
@@ -89,6 +98,10 @@
 \affil[3]{Maria's Institution 2}
 \affil[4]{Katherine's Institution}
 
+%%%%%%%
+% PDF %
+%%%%%%%
+
 % define PDF metadata, please fill in to aid in accessibility of the resulting PDF
 \hypersetup{%
   pdfauthor={Lovelace, Mitchell and Johnson}, % will be reset to "Anonymous" unless the "final" package option is given
@@ -96,6 +109,10 @@
   pdfsubject={dummyness},
   pdfkeywords={latex-simple}
 }
+
+%%%%%%%%%
+% PAPER %
+%%%%%%%%%
 
 \begin{document}
 
@@ -105,13 +122,19 @@
   A very engaging abstract can go here.
 \end{abstract}
 
+\section{The first section}
+
 \blindtext. The text above is meaningless, but more interesting stuff can be found in \citet{mitchell2003venus}.
+
+\section{The second section}
 
 \blindtext[2]
 
 \blinditemize
 
 \blindtext
+
+\section{The last section}
 
 \blindmathfalse
 
@@ -131,8 +154,18 @@
 
 % \printbibliography
 
+%%%%%%%%%%%%
+% APPENDIX %
+%%%%%%%%%%%%
+
 % supplemental material -- everything hereafter will be suppressed during
 % submission time if the hidesupplement option is provided!
+\vfill
+\pagebreak
 \appendix
+
+\section{The first appendix}
+
+\blindtext
 
 \end{document}
