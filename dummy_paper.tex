@@ -134,9 +134,31 @@
 
 \blindtext
 
+\begin{table}[h]
+\label{tab:thetable}
+\caption{A lil table}
+\begin{center}
+\begin{tabular}{ll}
+Letters & Numbers \\
+\hline            \\
+A       & 1       \\
+B       & 2       \\
+C       & 3       \\
+\end{tabular}
+\end{center}
+\end{table}
+
 \section{The last section}
 
 \blindmathfalse
+
+\begin{figure}[t]
+\label{fig:thefigure}
+\begin{center}
+\fbox{\rule[-.5cm]{0cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
+\end{center}
+\caption{Ceci n'est pas un carré.}
+\end{figure}
 
 \blindtext[2]
 
@@ -145,10 +167,14 @@
   \blindtext
 \end{acknowledgements}
 
-% print bibliography -- for bibtex / natbib, use:
+%%%%%%%%%%%%%%%%
+% BIBLIOGRAPHY %
+%%%%%%%%%%%%%%%%
 
-\bibliography{references}
+% for bibtex / natbib, use:
+
 \bibliographystyle{latex-simple}
+\bibliography{references}
 
 % and for biber / biblatex, use:
 
